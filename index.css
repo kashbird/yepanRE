@@ -14,9 +14,14 @@
         overflow: hidden;
         width: 100%;
         height: 650px;
-        background-color: skyblue;
     }
         .header_inner {
+            z-index: 99;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
             width: 1720px;
             height: 65px;
             display: flex;
@@ -42,20 +47,31 @@
                         line-height: 65px;
                         display: flex;
                     }
+                    .nav:hover .lnb {
+                        transform: scaleY(1);
+                        transform-origin: top left;
+                        transition: all 0.3s;
+                    }
                         .gnb_list > a {
                             color: white;
                             text-decoration: none;
                             font-weight: bold;
                         }
-
+                        .gnb_list > a:hover {
+                            font-weight: bold;
+                            font-size: 18px;
+                            transition: all 0.3s;
+                        }
                 .lnb {
+                    transform: scaleY(0);
+                    z-index: 99;
                     overflow: hidden;
                     background-color: white;
                     position: absolute;
-                    z-index: 99;
                     top: 65px;
+                    left: -640px;
                     width: 100vw;
-                    left: -665px;
+                    padding: 0;
                 }
                     .depth3 {
                         width: 640px;
@@ -67,8 +83,24 @@
                         text-align: center;
                         list-style: none;
                         padding: 0;
+                        margin: 30px 0px;
                     }
                         .depth3_list {
+                            margin-bottom: 10px;
+                            height: 20px;
+                        }
+                        .depth3_list:last-child {
+                            margin: 0;
+                        }
+                        .depth3_list a {
+                            color: #333;
+                            text-decoration: none;
+                        }
+                        .depth3_list a:hover {
+                            color: #AB8B67;
+                            font-weight: bold;
+                            font-size: 16px;
+                            transition: all 0.3s;
                         }
 
 
@@ -93,3 +125,60 @@
                         width: 25px;
                         height: 25px;
                     }
+
+        .top_slider {
+            width: 100%;
+            background-color: skyblue;
+        }
+            .slide_main {
+                height: 600px;
+            }
+                .slide_button {
+                    float: left;
+                    width: 50px;
+                    height: 600px;
+                    border: none;
+                    box-shadow: -1px -3px 5px rgba(0,0,0,.5);
+                    padding: 0;
+                }
+                .slide_list {
+                    position: relative;
+                    float:left;
+                    width: 1753px;
+                    height: 100%;
+                }
+                    .slide_item {
+                        height: 600px;
+                        box-shadow: -1px 0px 5px rgba(0,0,0,.5);
+                        max-width: 100%;
+                    }
+                        .slide_img img {
+                            width: 1753px;
+                            height: 600px;
+                        }
+                    
+                    .slide_inside {
+                        position: absolute;
+                        top: 200px;
+                        left: 150px;
+                        color: white;
+                    }
+                        .slide_num {
+                            font-size: 150px;
+                            font-family: 'Gowun Batang', serif;
+                            text-shadow: 0px 0px 8px rgba(0,0,0,.5);
+                        }
+                        .slide_title,
+                        .slide_txt {
+                            font-size: 20px;
+                            text-shadow: 0px 0px 5px rgba(0,0,0,.5);
+                        }
+                        .slide_title {
+                            margin-bottom: 15px;
+                            font-weight: bold;
+                        }
+                        .slide_txt {
+                            line-height: 30px;
+                            text-shadow: 0px 0px 5px rgba(0,0,0,.5);
+                        }
+
