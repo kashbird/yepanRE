@@ -542,7 +542,7 @@ h2 {
     height: 87px;
     overflow: hidden;
   }
-  .ex_slider {
+  /* .ex_slider {
     width: 100%;
     height: 700px;
   }
@@ -623,7 +623,7 @@ h2 {
     }
     .ex_slider li:hover:nth-child(3) p span::after {
       content: "상상의 속도 만큼 빠르게"
-    }
+    } */
 
 #best {
   width: 100%;
